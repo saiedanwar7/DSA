@@ -74,3 +74,11 @@ if(!spy){  // false
 }
 
 LinarSearch();
+
+
+
+
+//test
+
+var name1 = "hello";
+console.log(name1);

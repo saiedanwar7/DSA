@@ -1,6 +1,6 @@
 
 
-//=============== Bruth-force Algorithm =============
+//=============== Simple Iteration=============
 
 // console.log("1")
 
