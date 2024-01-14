@@ -23,33 +23,38 @@ function binarySearch(){
     // 2. right = array last index 10
     // 3. find mid index
 
-    // key === mid
-    // update left - right
+    //compare with mid ->  key === mid
+    // If mid greater then key then update right = mid - 1
+    // If mid less then key then update left = mid + 1
+
     // calculate mid
 
-    // break
+    /* break  - When we understand that loop have to stop?
+                - when left cross the right
+                - when right cross the left
+                - use while loop
+    */
 
-    const key = 200;
+    const key = 45;
 
     let left = 0;
     let right = arr.length - 1;
     let mid = Math.floor((left + right) /2);
 
     while(left <= right){
+
+        // Check if key is match at mid
         if(arr[mid] === key){
-            return 'Data found at index ' + mid; 
-        }
-        else if(arr[mid] > key){  // mid er value jodi key theke boro hoy
-             // update right
-             right = mid - 1;
-        
-            
+            return 'Data found at index ' + mid;    // if match return mid
+                                                    // jehetu function theke return korci peye gele return kore dibe
         }
 
-        else{
-            // update left    //mid er value jodi key theke choto hoy
+        else if(arr[mid] > key){  // If mid greater then key then update right
+             right = mid - 1;  
+        }
+
+        else{                    // If mid less then key then update left
             left = mid + 1;
-
             console.log(left)
         }
 
