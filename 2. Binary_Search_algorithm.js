@@ -11,7 +11,7 @@
 // console.log('5');
 
 
-//=============== Binary Search ==================
+//===================  Binary Search ======================
 
 
 
@@ -29,7 +29,7 @@ function binarySearch(){
 
     // calculate mid
 
-    /* break  - When we understand that loop have to stop?
+    /* break    - When we understand that loop have to stop?
                 - when left cross the right
                 - when right cross the left
                 - use while loop
@@ -57,7 +57,6 @@ function binarySearch(){
             left = mid + 1;
             console.log(left)
         }
-
         // calculate mid
         
         mid = Math.floor((left + right) / 2);
@@ -71,59 +70,4 @@ console.log(binarySearch());
 
 
 
-/*
-            1. Iterative  Binary Search Algorithm:
-Here we use a while loop to continue the process of comparing the key and splitting the search space in two halves.
 
-
-
-    -   Program to implement iterative Binary Search
-    -   A iterative binary search function. It returns
-    -   location of x in given array arr[l..r] is present,
-    -   otherwise -1
-
-*/
-
-
-
-
-
-/*================ geeksforgeeks.org ====================
-
-arr = new Array(2, 3, 4, 10, 40);
-x = 10; // key value for find from array
-
-n = arr.length;
-// result = binarySearch(arr, x);
-
-function binarySearch1(arr, x){
-    let l = 0;
-    let r = arr.length -1;
-    
-    while ( r >= l){
-        mid = l + Math.floor((r - 1) / 2);
-
-        if(arr[mid] == x ){
-            return "key found in mid ", mid;
-        }
-        else if (arr[mid] > x){
-            r = mid - 1;
-        }
-        else{
-            l = mid + 1;
-        }
-
-        return "key not found!", -1;
-        
-    }
-
-
-}
-
-result = binarySearch1(arr, x);
-
-(result == -1) ? console.log("Element is not present in array")
-           : console.log ("Element is present at index " + result);
-
-
-*/
