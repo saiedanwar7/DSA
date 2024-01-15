@@ -1,5 +1,38 @@
-// Ceiling Number In Sorted Array
+/*===============  Ceiling Number In Sorted Array  ====================
 
+    -> At first find the sorted Array mid. 
+    -> After find mid we compare mid with key if mid grether then key then shift mid on the left and create new array. 
+                right = mid - 1
+    -> The again and again find mid and compare with key never find key then we set our finding Ceiling is - mid + 1;
+   
+
+    key = 50;  finding Ceiling = 
+
+    step - 1:
+    ---------
+
+    arr = [12, 25, 33, 37, 45, 58, 100, 112, 140, 200, 255];  
+    -> mid = 58  -> key < 58 -> mid shift left that means (right = mid - 1);
+
+    step - 2:
+    ---------
+    arr = [12, 25, 33, 37, 45];   
+    -> mid = 33; key > mid; mid shift right that means (left = mid + 1)
+
+    step - 3:
+    ---------
+    arr = [37, 45];   
+    -> mid = 37; key > mid; mid shift right that means (left = mid + 1)
+
+    step - 4:
+    --------
+    arr = [45]  
+    - compare with key if find key grether then this value then comfram Ceiling is grether then this value
+    -> mid = mid + 1  - comfram Ceiling
+
+
+
+*/
 
 let arr = [12, 25, 33, 37, 45, 58, 100, 112, 140, 200, 255];
 
@@ -10,7 +43,7 @@ let arr = [12, 25, 33, 37, 45, 58, 100, 112, 140, 200, 255];
 
 function binarySearch(){
 
-    const key = 300;
+    const key = 50;
 
     let left = 0;
     let right = arr.length - 1;
